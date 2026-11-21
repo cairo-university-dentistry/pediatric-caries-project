@@ -104,7 +104,41 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}body{background:#080a10;colo
 footer{background:#05070b;color:#858a98;border-top:1px solid #ffffff1c;padding:28px 8vw;font:9px 'DM Mono',monospace;letter-spacing:.1em}.reveal{transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.show{opacity:1;transform:none}.gold-cta{display:none!important}
 .cinematic-progress{position:fixed;z-index:9;bottom:0;left:0;width:100%;height:58px;background:rgba(6,8,13,.96);backdrop-filter:blur(18px);border-top:1px solid #ffffff22;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;gap:16px}.cinematic-progress .progress-meta{font:9px 'DM Mono',monospace;letter-spacing:.12em;color:#aeb3bf;white-space:nowrap}.cinematic-progress .progress-meta b{color:var(--g);font-weight:500}.cinematic-progress .track{height:2px;background:#ffffff22;flex:1;max-width:460px;position:relative}.cinematic-progress .fill{height:100%;width:0;background:var(--g);transition:width .2s}.cinematic-progress a{background:var(--g);color:#0a0d09;text-decoration:none;padding:11px 20px;font:700 10px 'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}.cinematic-progress a:hover{background:#efffa5}body{padding-bottom:58px}
 @media(max-width:800px){.bar{height:62px;padding:0 5vw}.hero{padding:130px 7vw 120px}.hero-art{width:58vw;right:-18vw;bottom:7%;opacity:.22}.hero h1{font-size:clamp(58px,15vw,92px)}.section{padding:82px 6vw}.team{grid-template-columns:1fr 1fr}.clinical-gallery{grid-template-columns:1fr 1fr}.cinematic-progress{height:55px;padding:0 4vw}.cinematic-progress .track{max-width:none}.cinematic-progress a{padding:10px 13px}}
-@media(max-width:480px){nav a:nth-child(n+3){display:none}.brand{font-size:9px}.hero:before{inset:10px}.hero h1{font-size:62px}.hero p{font-size:13px}.stages{grid-template-columns:1fr 1fr}.clinical-gallery{grid-template-columns:1fr}.cinematic-progress .progress-meta{font-size:8px}.cinematic-progress a{font-size:9px;padding:10px}.onepage-visual-grid,.onepage-intro{grid-template-columns:1fr}}</style></head><body>
+@media(max-width:480px){nav a:nth-child(n+3){display:none}.brand{font-size:9px}.hero:before{inset:10px}.hero h1{font-size:62px}.hero p{font-size:13px}.stages{grid-template-columns:1fr 1fr}.clinical-gallery{grid-template-columns:1fr}.cinematic-progress .progress-meta{font-size:8px}.cinematic-progress a{font-size:9px;padding:10px}.onepage-visual-grid,.onepage-intro{grid-template-columns:1fr}}
+/* HERO REFINEMENT — responsive first-screen composition */
+html,body{max-width:100%;overflow-x:clip}
+.hero{isolation:isolate;min-height:100svh;padding-left:clamp(22px,7vw,100px);padding-right:clamp(22px,7vw,100px)}
+.hero>div:first-child{width:min(100%,760px);max-width:760px;min-width:0}
+.hero h1{max-width:100%;width:100%;overflow-wrap:normal;word-break:normal;hyphens:none;font-size:clamp(58px,8.9vw,116px);line-height:.88;letter-spacing:-.055em}
+.hero h1 em{display:inline-block;max-width:100%;font-size:1em;line-height:.92}
+.hero p{width:100%;max-width:590px}
+.chips{max-width:100%;display:flex;flex-wrap:wrap;align-items:flex-start}
+.chips span{max-width:100%;white-space:normal}
+.hero-art{pointer-events:none}
+@media(max-width:800px){
+ .hero{min-height:calc(100svh - 62px);padding:140px 6vw 125px;align-items:center}
+ .hero>div:first-child{width:100%;max-width:100%}
+ .hero h1{font-size:clamp(48px,11.5vw,76px);line-height:.9;letter-spacing:-.055em;margin:24px 0 22px}
+ .hero h1 em{font-size:1em}
+ .hero p{max-width:100%;font-size:14px;line-height:1.75}
+ .chips{gap:8px;margin-top:25px}
+ .chips span{font-size:9px;padding:9px 10px}
+ .hero-art{width:56vw;right:-16vw;bottom:8%;top:auto;transform:none;opacity:.16}
+}
+@media(max-width:480px){
+ .hero{min-height:calc(100svh - 62px);padding:125px 7vw 115px}
+ .eyebrow{font-size:9px;letter-spacing:.14em;line-height:1.7}
+ .hero h1{font-size:clamp(41px,11.8vw,54px);line-height:.93;letter-spacing:-.06em;margin:22px 0 20px}
+ .hero h1 em{font-size:1em;letter-spacing:-.065em}
+ .hero p{font-size:13px;line-height:1.75;max-width:100%;overflow-wrap:break-word}
+ .chips{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:8px}
+ .chips span{display:flex;align-items:center;min-height:42px;padding:9px 10px;font-size:8px;line-height:1.45;letter-spacing:.035em}
+ .chips span:last-child{grid-column:1/-1}
+ .hero-art{width:65vw;right:-24vw;bottom:7%;opacity:.12}
+ .hero:before{inset:8px}
+ .hero:after{right:-42vw;width:100vw;height:100vw;top:25%}
+}
+</style></head><body>
 <header class="bar"><a class="brand" href="#home">THE <b>PEDIATRIC</b> CARIES PROJECT</a><nav><a href="#ecc">ECC</a><a href="#rampant">Rampant</a><a href="#compare">Comparison</a><a href="#refs">Sources</a></nav></header>
 <main>
 <section class="hero" id="home"><div><div class="eyebrow">Pediatric Dentistry · Self-Learning Project</div><h1>Understanding<br><em>Pediatric Caries.</em></h1><p>An evidence-informed academic exploration of Early Childhood Caries and Rampant Caries — from disease patterns and risk factors to prevention and clinical management.</p><div class="chips"><span>Early Childhood Caries</span><span>Rampant Caries</span><span>Clinical Comparison</span></div></div><div class="hero-art" aria-hidden="true"><svg viewBox="0 0 500 560" role="img"><defs><linearGradient id="enamel" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff9e9"/><stop offset=".55" stop-color="#e5d0a3"/><stop offset="1" stop-color="#9b8055"/></linearGradient><linearGradient id="root" x1="0" x2="1"><stop stop-color="#e8d8b7"/><stop offset="1" stop-color="#a98d60"/></linearGradient><radialGradient id="halo"><stop stop-color="#e5d0a3" stop-opacity=".28"/><stop offset="1" stop-color="#e5d0a3" stop-opacity="0"/></radialGradient></defs><circle cx="250" cy="250" r="230" fill="url(#halo)"/><circle class="orbit" cx="250" cy="250" r="205" fill="none" stroke="#e5d0a3" stroke-opacity=".35" stroke-dasharray="3 13" stroke-width="2"/><g class="tooth-float"><path d="M145 106 C100 82 74 123 88 190 C100 248 125 279 140 349 C151 402 173 469 201 466 C231 463 225 355 250 350 C276 345 271 464 303 466 C337 468 352 394 364 337 C380 265 408 221 408 168 C408 105 365 81 322 105 C291 122 273 135 250 125 C220 112 184 128 145 106Z" fill="url(#enamel)" stroke="#fff4d9" stroke-width="5"/><path d="M160 139 C133 127 117 151 130 199 C143 247 164 273 175 330 C184 373 194 411 207 416 C221 421 224 335 250 324 C276 336 278 420 294 416 C313 411 325 348 337 300 C350 246 378 197 371 155 C366 125 341 124 319 141 C289 164 273 168 249 158 C221 147 188 153 160 139Z" fill="#f7e7c4" opacity=".8"/><path d="M224 195 C205 218 210 263 228 288 C239 304 239 332 250 344 C261 330 260 305 274 287 C294 258 295 218 275 195 C261 179 238 180 224 195Z" fill="#c77b64" opacity=".9"/><path d="M249 344 C237 377 240 420 229 449 M251 344 C267 379 261 421 278 451" fill="none" stroke="#c77b64" stroke-width="12" stroke-linecap="round"/><path d="M100 176 C121 165 132 166 151 178" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="8" stroke-linecap="round"/></g><path class="lesion" d="M333 120 Q353 103 373 124 L365 150 Q346 158 331 143Z" fill="#9c573c" stroke="#e5b17d" stroke-width="3"/><path d="M366 127 L433 84" stroke="#e5d0a3" stroke-width="2"/><circle cx="433" cy="84" r="4" fill="#e5d0a3"/><text x="438" y="77" class="diagram-label">Enamel lesion</text></svg></div></section>
